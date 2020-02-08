@@ -26,15 +26,17 @@ class IngestorInterface(ABC):
 		pass
 
 class TextIngestor(IngestorInterface):
+	@classmethod
 	def parse(cls, path:str):
 		quote_models = []
 		with open(path, "rb") as file:
 			f = file.readlines()
 		quote_models = [QuoteModel(*line.decode().rstrip().split("-")) for line in f]
 		
-		return quoteModels
+		return quote_models
 
 class DocxIngestor(IngestorInterface):
+	@classmethod
 	def parse(cls, path:str):
 		document = Document(path)
 		list_of_paragraphs = [paragraph.text.strip() for paragraph in document.paragraphs if "-" in paragraph.text.strip()]
@@ -43,11 +45,13 @@ class DocxIngestor(IngestorInterface):
 	
 
 class PdfIngestor(IngestorInterface):
+	@classmethod
 	def parse(cls, path:str):
 		pass
 
 
 class CsvIngestor(IngestorInterface):
+	@classmethod
 	def parse(cls, path:str):
 		quote_models = []
 		try:
