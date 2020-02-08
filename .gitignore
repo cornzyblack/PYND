@@ -1,2 +1,5 @@
 .vscode
 _config.yml
+.env
+venv
+__pycache__
