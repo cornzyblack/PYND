@@ -4,3 +4,4 @@ _config.yml
 venv
 __pycache__
 src/test.py
+static/
