@@ -2,7 +2,9 @@ import os
 import random
 
 # @TODO Import your Ingestor and MemeEngine classes
-from QuoteEngine import IngestorInterface
+from QuoteEngine import Ingestor, QuoteModel
+from MemeGenerator import MemeEngine
+import argparse
 
 def generate_meme(path=None, body=None, author=None):
     """ Generate a meme given an path and a quote """
@@ -17,7 +19,7 @@ def generate_meme(path=None, body=None, author=None):
 
         img = random.choice(imgs)
     else:
-        img = path[0]
+        img = path
 
     if body is None:
         quote_files = ['./_data/DogQuotes/DogQuotesTXT.txt',
@@ -34,8 +36,9 @@ def generate_meme(path=None, body=None, author=None):
             raise Exception('Author Required if Body is Used')
         quote = QuoteModel(body, author)
 
-    meme = MemeEngine('./tmp')
+    meme = MemeEngine('./static')
     path = meme.make_meme(img, quote.body, quote.author)
+    print("Download Path meme gen:", path)
     return path
 
 
@@ -44,5 +47,10 @@ if __name__ == "__main__":
     # path - path to an image file
     # body - quote body to add to the image
     # author - quote author to add to the image
-    args = None
+    parser = argparse.ArgumentParser(description='Generate some Memes')
+    parser.add_argument("--body", help="The text to be displayed in the Meme",  action="store", type=str)
+    parser.add_argument("--author", help="The author of the text", action="store", type=str)
+    parser.add_argument("--path", help="The Path location of the image to be turned into a Meme", action="store", type=str)
+    
+    args = parser.parse_args()
     print(generate_meme(args.path, args.body, args.author))
