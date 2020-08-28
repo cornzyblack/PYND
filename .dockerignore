@@ -1,0 +1,9 @@
+*.vscode
+*_config.yml
+*.env
+*venv
+*__pycache__
+src/test.py
+static/
+*.ipynb
+*.ipynb_checkpoints

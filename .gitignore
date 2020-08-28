@@ -2,6 +2,8 @@
 _config.yml
 .env
 venv
-__pycache__
+*__pycache__
 src/test.py
 static/
+*.ipynb
+*.ipynb_checkpoints
