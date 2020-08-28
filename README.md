@@ -1,27 +1,28 @@
 # Motivational Puppy Meme Generator
 
 
-The goal of this project is to build a "meme generator"—a multimedia application to dynamically generate memes, including an image with an overlaid quote. It’s not that simple though! Your content team spent countless hours writing quotes in a variety of filetypes. You could manually copy and paste these quotes into one standard format – but you’re going to over-engineer a solution to load quotes from each file to show off your fancy new Python skills. 
+The goal of this project is to build a "meme generator"—a multimedia application to dynamically generate memes, including an image with an overlaid quote
 
 ![demo gif](./demo.gif)
 
 ## Installation
 
-To get started, please make sure you have Python 3 installed on your system. You can download it here [here](https://www.python.org/downloads/)
+To get started, please make sure you have Docker installed on your system. You can download it here [here](https://docs.docker.com/get-docker/)
 
-### Virtual Environment Setup
-Set up your and activate your Python Virtual environment by running the following from within the project root directory.
+## Setting
 
-    $ python -m venv venv
-    $ source venv/Scripts/activate
-    
-### Install Dependencies
-To install required Dependencies necessary to run the app, run the following:
+### Build Docker Image
 
-    $ pip install -r requirements.txt
+Run the following in a terminal to build the Docker image
 
-## Start App
+```bash
+    $ docker image build --tag meme_generator .
+```
 
-    flask run
+## Start the App
 
+```bash
+    $ docker run -p 5000:5000 meme_generator
+```
 
+Now go to http://127.0.0.1:5000 to access the app
