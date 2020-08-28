@@ -5,6 +5,10 @@ The goal of this project is to build a "meme generator"—a multimedia applicati
 
 ![demo gif](./demo.gif)
 
+The live version can be accessed [here](https://thawing-spire-21589.herokuapp.com/create)
+
+# Running Locally
+
 ## Installation
 
 To get started, please make sure you have Docker installed on your system. You can download it here [here](https://docs.docker.com/get-docker/)
