@@ -5,7 +5,7 @@ The goal of this project is to build a "meme generator"—a multimedia applicati
 
 ![demo gif](./demo.gif)
 
-The live version can be accessed [here](https://thawing-spire-21589.herokuapp.com/create)
+The live version can be accessed [here](https://thawing-spire-21589.herokuapp.com)
 
 # Running Locally
 
