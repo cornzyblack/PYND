@@ -14,4 +14,5 @@ RUN pip install -r requirements.txt
 
 COPY ./src  /src
 
-CMD [ "python", "/src/app.py", "--host", "127.0.0.1" ]
+# CMD [ "python", "/src/app.py", "--host", "127.0.0.1" ]
+CMD ["python", "app.py"]
