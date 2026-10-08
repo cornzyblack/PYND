@@ -51,7 +51,7 @@ Send2Trash==1.5.0
 six==1.14.0
 terminado==0.8.3
 testpath==0.4.4
-tornado==6.5.7
+tornado==6.5.9
 traitlets==4.3.3
 urllib3==2.7.0
 wcwidth==0.2.5
